@@ -16,7 +16,7 @@ class NewsPage extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://newsapi.org/v2/sources?category=technology&language=en&apiKey=e0a135705a85474db6f404ea7cb35857"
+        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/sources?category=technology&language=en&apiKey=e0a135705a85474db6f404ea7cb35857"
       )
       .then(responce => {
         const sources = responce.data.sources;
@@ -51,7 +51,7 @@ class NewsPage extends Component {
     }
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=technology&domains=${domainUrl}&page=${page}&pageSize=${pageSize}&apiKey=e0a135705a85474db6f404ea7cb35857`
+        `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=technology&domains=${domainUrl}&page=${page}&pageSize=${pageSize}&apiKey=e0a135705a85474db6f404ea7cb35857`
       )
       .then(responce => {
         let presentArticles = [];
